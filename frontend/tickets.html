@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book Tickets</title><meta name="description" content="Book tickets for church functions and events.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body data-title="Book Tickets"><a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="page-hero"><div class="container"><h1>Book tickets</h1><p>Reserve your place at our upcoming functions.</p></div></div>
+<section><div class="container" style="max-width:820px"><div id="ticket-app">
+<form id="ticket-form" class="card">
+  <div><label for="event-select">Event</label><select id="event-select"></select><p id="event-info" style="margin-top:8px"></p></div>
+  <div><label>Tickets</label><div id="ticket-types"></div><div class="total"><span>Total</span><span id="total">KES 0</span></div></div>
+  <div class="two"><div><label for="t-name">Full name</label><input id="t-name" name="name" required autocomplete="name"></div>
+  <div><label for="t-phone">Phone number (to pay with)</label><input id="t-phone" name="phone" type="tel" required autocomplete="tel" placeholder="07xx xxx xxx"></div></div>
+  <div><label for="t-email">Email (optional)</label><input id="t-email" name="email" type="email" autocomplete="email"></div>
+  <div><label for="t-notes">Notes (optional)</label><textarea id="t-notes" name="notes" style="min-height:80px" placeholder="Seating requests, dietary needs…"></textarea></div>
+  <div id="pay-box" class="hidden stack"></div>
+  <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+  <button class="btn btn-primary" id="book-btn" disabled>Book tickets</button>
+  <div id="book-error" class="notice" role="alert"></div>
+</form></div></div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/config.js"></script><script src="js/data.js"></script><script src="js/main.js"></script>
+</body></html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact</title><meta name="description" content="Contact us or send a prayer request.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head>
+<body data-title="Contact"><a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="page-hero"><div class="container"><h1>Contact us</h1><p>We'd love to hear from you.</p></div></div>
+<section><div class="container grid g2" style="align-items:start">
+  <div class="stack"><h2>Get in touch</h2>
+    <p><b>Address:</b> <span data-site="address"></span>, <span data-site="city"></span></p>
+    <p><b>Phone:</b> <span data-site="phone"></span></p><p><b>Email:</b> <span data-site="email"></span></p>
+    <div class="card" style="margin-top:20px"><h3>Service times</h3><div id="service-times"></div></div></div>
+  <div class="card"><div class="tabs"><button data-tab="contact">Send a message</button><button data-tab="prayer">Prayer request</button></div>
+    <form data-form="contact" data-panel="contact">
+      <div class="two"><div><label for="c-name">Name</label><input id="c-name" name="name" required></div><div><label for="c-email">Email</label><input id="c-email" name="email" type="email" required></div></div>
+      <div><label for="c-phone">Phone (optional)</label><input id="c-phone" name="phone" type="tel"></div>
+      <div><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea></div>
+      <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <button class="btn btn-dark">Send message</button><div class="notice" role="status"></div></form>
+    <form data-form="prayer" data-panel="prayer" class="hidden">
+      <div><label for="p-name">Name (optional)</label><input id="p-name" name="name"></div>
+      <div><label for="p-phone">Phone or email (optional)</label><input id="p-phone" name="contact"></div>
+      <div><label for="p-req">Your prayer request</label><textarea id="p-req" name="request" required></textarea></div>
+      <label style="font-weight:400"><input type="checkbox" name="confidential" value="yes" style="width:auto"> Keep this confidential (pastors only)</label>
+      <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <button class="btn btn-dark">Send prayer request</button><div class="notice" role="status"></div></form>
+  </div>
+</div></section>
+<section class="pad0"><div class="container" style="padding-bottom:64px"><iframe id="map" class="map" title="Map" loading="lazy"></iframe></div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/config.js"></script><script src="js/data.js"></script><script src="js/main.js"></script>
+</body></html>
